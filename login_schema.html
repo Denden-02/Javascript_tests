@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login schema</title>
+</head>
+<body>
+    <!-- <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check"> -->
+    <h1>Login Schema by the Odin Project</h1>
+    <script>
+        let user = prompt("Who's there? "); //Converts any inputs into STRINGS, pressing ESC will result in NULL type, and empty input into EMPTY STRING
+        if (user === null) {
+            alert("Canceled!");
+        }
+        else if (user === "Admin") {
+            let user_password = prompt("Enter Password: ");
+            if (user_password === "TheMaster") {alert("Welcome back tol!");}
+            else if (user_password === null ||  "") {alert("Canceled!");}
+            else {alert("Wrong password! Tangina mo naman oh.");}
+        }
+        else {
+            alert("I fucking don't know you!");
+        }
+    </script>
+</body>
+</html>
