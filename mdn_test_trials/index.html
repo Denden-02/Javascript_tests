@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -28,24 +29,27 @@
     </section>
     <button onclick="document.getElementById('output').innerHTML = RanNameGen()">Click me!</button>
     <p id="output"></p>
+
+    <script>
+        const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+        const para = document.createElement('p'); //gawa ng 'p' node
+        const text1 = document.createTextNode(`Guest Lists: ${names}`); // gawa ng assign text node
+        const sect1 = document.getElemendById('prev'); // select section in html 
+        document.getElementById('prev').appendChild(text1).innerHTML; //dinikit sa html doc
+    
+        // Add your code here
+        function RanNameGen(){
+            let i = Math.floor(Math.random()*((names.length)-1))
+            return names.at(i);
+        }
+        // Don't edit the code below here!
+    
+        const section = document.querySelector('section');
+    
+        // section.appendChild(para);
+      </script>
+
   </body>
-  <script>
-    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
-    const para = document.createElement('p'); //gawa ng 'p' node
-    const text1 = document.createTextNode(`Guest Lists: ${names}`); // gawa ng assign text node
-    const sect1 = document.getElemendById('prev'); // select section in html 
-    document.getElementById('prev').appendChild(text1).innerHTML; //dinikit sa html doc
-
-    // Add your code here
-    function RanNameGen(){
-        let i = Math.floor(Math.random()*((names.length)-1))
-        return names.at(i);
-    }
-    // Don't edit the code below here!
-
-    const section = document.querySelector('section');
-
-    // section.appendChild(para);
-  </script>
+  
 
 </html>
